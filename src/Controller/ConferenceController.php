@@ -12,6 +12,7 @@ class ConferenceController extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(Request $request): Response
     {
+        dump($request);
         $greet = '';
         if ($name = $request->query->get('hello')) {
             $greet = sprintf('<h1>Hello %s!</h1>', htmlspecialchars($name));
