@@ -23,6 +23,7 @@ SET row_security = off;
 COPY public.conference (id, city, year, is_international) FROM stdin;
 1	Amsterdam	2022	t
 2	Paris	2022	f
+3	Tokyo	2022	t
 \.
 
 
@@ -39,7 +40,6 @@ COPY public.comment (id, conference_id, author, text, email, created_at, photo_f
 --
 
 COPY public.doctrine_migration_versions (version, executed_at, execution_time) FROM stdin;
-DoctrineMigrations\\Version20220326164202	2022-03-26 16:44:40	66
 \.
 
 
@@ -55,14 +55,14 @@ COPY public.messenger_messages (id, body, headers, queue_name, created_at, avail
 -- Name: comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: symfony
 --
 
-SELECT pg_catalog.setval('public.comment_id_seq', 3, true);
+SELECT pg_catalog.setval('public.comment_id_seq', 6, true);
 
 
 --
 -- Name: conference_id_seq; Type: SEQUENCE SET; Schema: public; Owner: symfony
 --
 
-SELECT pg_catalog.setval('public.conference_id_seq', 2, true);
+SELECT pg_catalog.setval('public.conference_id_seq', 3, true);
 
 
 --
