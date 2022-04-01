@@ -40,7 +40,7 @@ class ConferenceController extends AbstractController
         $form = $this->createForm(CommentFormType::class, $comment);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $commment->setConference($conference);
+            $comment->setConference($conference);
 
             $this->entityManager->persist($comment);
             $this->entityManager->flush();
