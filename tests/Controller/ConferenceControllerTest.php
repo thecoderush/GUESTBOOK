@@ -13,5 +13,6 @@ class ConferenceControllerTest extends WebTestCase
 
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h2', 'Give your feedback');
+        
     }
 }
