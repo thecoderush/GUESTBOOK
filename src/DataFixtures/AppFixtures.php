@@ -28,7 +28,7 @@ class AppFixtures extends Fixture
         $paris = new Conference();
         $paris->setCity('Paris');
         $paris->setYear('2020');
-        $amsterdam->setIsInternational(flase);
+        $amsterdam->setIsInternational(false);
         $manager->persist($paris);
 
         $comment1 = new Comment();
