@@ -25,7 +25,7 @@ class SpamChecker
     {
         $response = $this->client->request('POST', $this->endpoint, [
             'body' => array_merge($context, [
-                'blog' => 'https://guestbook.example.com',
+                'blog' => 'https://127.0.0.1:8000',
                 'comment_type' => 'comment',
                 'comment_author' => $comment->getAuthor(),
                 'comment_author_email' => $comment->getEmail(),
@@ -46,7 +46,8 @@ class SpamChecker
         if (isset($headers['x-akismet-debug-help'][0])) {
             throw new \RuntimeException(sprintf('Unable to check for spam: %s (%s).', $content, $headers['x-akismet-debug-help'][0]));
         }
-
+        
         return 'true' === $content ? 1 : 0;
+
     }
 }
