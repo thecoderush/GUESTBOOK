@@ -9,6 +9,7 @@ use Symfony\Component\HttpKernelInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpKernel\KernelInterface;
 
+#[Route('/admin')]
 class AdminController extends AbstractController 
 {
     #[Route('/admin/http-cache/{uri<.*>}', methods: ['PURGE'])]
