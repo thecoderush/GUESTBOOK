@@ -31,21 +31,18 @@ function App() {
                 </nav>
 
                 <nav className="bg-light border-bottom text-center">
-                    <Link className="nav-conference" href="/conference/amsterdam2019">
-                        amsterdam 2019
-                    </Link>
                     {conferences.map((conference) => (
-                        <Link className="nav-conference" href="{'/conference/'+conference.slug}">
+                        <Link className="nav-conference" href={'/conference/'+conference.slug}>
                             {conference.city} {conference.year}
                         </Link>
                     ))}
                 </nav>
-           </header>
-
-            <router>
+            </header>
+          
+            <Router>
                 <Home path="/" conferences={conferences} />
                 <Conference path="/conference/:slug" conferences={conferences} />
-            </router>
+            </Router>
         </div>
     )
 }

@@ -16,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
     collectionOperations: ['get' => ['normalization_context' => ['groups' => 'comment:list']]],
     itemOperations: ['get' => ['normalization_context' => ['groups' => 'comment:item']]],
     order: ['createdAt' => 'DESC'],
-    // paginationEnable: false,
+    paginationEnabled: false,
 )]
 #[ApitFilter(SearchFilter::class, properties: ['conference' => 'exact'])]
 class Comment

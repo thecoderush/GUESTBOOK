@@ -13,11 +13,11 @@ export default function Home({conferences}) {
                     <div className="card-body">
                         <div className="card-title">
                             <h4 className="font-weight-light">
-                                {conferences.city} {conference.year}
+                                {conference.city} {conference.year}
                             </h4>
                         </div>  
                     
-                        <Link className="btn btn-sm btn-primary stretched-link" href={'/conference/'+conferences.slug}>
+                        <Link className="btn btn-sm btn-primary stretched-link" href={'/conference/'+conference.slug}>
                             View
                         </Link>
                     </div>

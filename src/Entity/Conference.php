@@ -17,7 +17,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
     collectionOperations: ['get' => ['normalization_context' => ['groups' => 'conference:list']]],
     itemOperations: ['get' => ['normalization_context' => ['groups' => 'conference:item']]],
     order: ['year' => 'DESC', 'city' => 'ASC'],
-    // paginationEnable: false,
+    paginationEnabled: false,
 )]
 class Conference
 {
